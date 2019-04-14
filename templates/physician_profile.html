@@ -11,6 +11,8 @@
             </div>
             <div style="width: 60%; float: left;">
                 {{contents | safe}}
+                <h2>Zorgkaart</h2>
+                <iframe src="./physician_zorgkaart/{{zorgkaart_id}}" style="width: 100%; height: 25%;"></iframe>
                 <h2>Scientific publications</h2>
                 {{articles_html | safe}}
             </div>

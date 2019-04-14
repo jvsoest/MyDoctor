@@ -18,6 +18,11 @@ def physicianPage():
                 physician_name=contents["title"],
                 contents=contents["content"],
                 profile_pic_url=contents["image_url"],
-                articles_html=articlesHtml)
+                articles_html=articlesHtml,
+                zorgkaart_id="dermatoloog-martens-h-302277")
+
+@app.route("/physician_zorgkaart/<string:zorgverlener_id>")
+def physicianZorgkaartReview(zorgverlener_id):
+    return scraper.scrapeZorgkaartResponse("https://www.zorgkaartnederland.nl/zorgverlener/" + zorgverlener_id)
 
 app.run(debug=True, host='0.0.0.0', port=5000)

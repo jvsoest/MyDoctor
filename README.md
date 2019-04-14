@@ -7,7 +7,7 @@
 1. Download or check-out this repository
 2. Run the command `pip install -r requirements` to download all needed libraries
 3. Run the application by executing `python run.py`
-4. Open the webpage at (http://localhost:5000)[http://localhost:5000]
+4. Open the webpage at [http://localhost:5000](http://localhost:5000)
 
 ## Description
 This app scrapes information from:

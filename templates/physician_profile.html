@@ -4,13 +4,15 @@
     </head>
 
     <body>
-        <h2>{{physician_name}}</h2>
+        <h1>{{physician_name}}</h1>
         <section class="container">
             <div style="float: left; margin-right: 20px;">
                 <img src="{{profile_pic_url | safe }}" width="200px"/>
             </div>
             <div style="width: 60%; float: left;">
                 {{contents | safe}}
+                <h2>Scientific publications</h2>
+                {{articles_html | safe}}
             </div>
             <div style="width: 20%; float: left; height: 50%; overflow-y: auto;">
                 <a class="twitter-timeline" href="https://twitter.com/{{twitter_profile_name}}?ref_src=twsrc%5Etfw">Tweets by HermMartens</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>

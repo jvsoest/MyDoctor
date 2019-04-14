@@ -1,6 +1,18 @@
 import urllib.request
 from bs4 import BeautifulSoup
 
+def scrapeCrisUMArticlesHtml(webpage_url):
+#webpage_url = "https://cris.maastrichtuniversity.nl/portal/en/persons/herm-martens(9e6f27d3-215b-4de6-bbcf-406d9d6b6e66)/publications.html"
+    page = urllib.request.urlopen(webpage_url)
+    soup = BeautifulSoup(page, "html.parser")
+
+    articlesListHtml = soup.findAll("div", attrs={"class": "rendering_researchoutput"})
+
+    returnString = ""
+    for article in articlesListHtml:
+        returnString = returnString + str(article) + "<br/>"
+    return returnString
+
 def scrapeWebPageMumc(webpage_url):
     page = urllib.request.urlopen(webpage_url)
     soup = BeautifulSoup(page, "html.parser")
